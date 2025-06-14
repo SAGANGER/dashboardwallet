@@ -29,7 +29,7 @@ function App() {
       setError(null);
       const walletList = JSON.parse(wallets);
       console.log('Sending request to backend with wallets:', walletList);
-      const response = await axios.post('http://localhost:8000/analyze', { wallets: walletList });
+      const response = await axios.post('https://dashboardwallet.onrender.com/analyze', { wallets: walletList });
       console.log('Received response from backend:', response.data);
       setLeaderboard(response.data);
     } catch (error: any) {
